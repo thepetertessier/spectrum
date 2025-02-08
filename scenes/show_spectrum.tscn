@@ -1,16 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfyeamw4sg2af"]
+[gd_scene load_steps=5 format=3 uid="uid://dfyeamw4sg2af"]
 
-[ext_resource type="Script" path="res://show_spectrum.gd" id="1"]
-[ext_resource type="AudioStream" uid="uid://dl3ppges2sw77" path="res://maldita.ogg" id="2"]
+[ext_resource type="Script" path="res://show_spectrum.gd" id="1_w03r5"]
+[ext_resource type="AudioStream" uid="uid://dl3ppges2sw77" path="res://maldita.ogg" id="2_cqfxr"]
+[ext_resource type="PackedScene" uid="uid://vy52ktvsft8k" path="res://scenes/detect_pitch.tscn" id="3_3gki5"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_iu0dv"]
 
 [node name="ShowSpectrum" type="Node2D"]
 position = Vector2(136, 80)
-script = ExtResource("1")
+script = ExtResource("1_w03r5")
 
 [node name="Player" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2")
+stream = ExtResource("2_cqfxr")
 volume_db = 24.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -21,3 +22,5 @@ offset = Vector2(440, 100)
 stream = SubResource("AudioStreamMicrophone_iu0dv")
 autoplay = true
 bus = &"MicInput"
+
+[node name="DetectPitch" parent="." instance=ExtResource("3_3gki5")]

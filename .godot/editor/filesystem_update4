@@ -1,3 +1,6 @@
 res://default_bus_layout.tres
 res://show_spectrum.tscn
 res://show_spectrum.gd
+res://scenes/show_spectrum.tscn
+res://scenes/detect_pitch.tscn
+res://scripts/detect_pitch.gd
