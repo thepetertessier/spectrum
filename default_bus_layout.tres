@@ -1,0 +1,37 @@
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://byxtiup0hs2og"]
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_ihlsb"]
+resource_name = "SpectrumAnalyzer"
+
+[sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_vleye"]
+resource_name = "Amplify"
+volume_db = 14.05
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_dtcv3"]
+resource_name = "Limiter"
+
+[sub_resource type="AudioEffectRecord" id="AudioEffectRecord_fmq2e"]
+resource_name = "Record"
+
+[resource]
+bus/0/mute = true
+bus/0/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_ihlsb")
+bus/0/effect/0/enabled = true
+bus/1/name = &"MicOutput"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectAmplify_vleye")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectLimiter_dtcv3")
+bus/1/effect/1/enabled = true
+bus/2/name = &"MicInput"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"MicOutput"
+bus/2/effect/0/effect = SubResource("AudioEffectRecord_fmq2e")
+bus/2/effect/0/enabled = true
