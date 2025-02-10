@@ -21,6 +21,6 @@ offset = Vector2(440, 100)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMicrophone_iu0dv")
 autoplay = true
-bus = &"MicInput"
+bus = &"MicOutput"
 
 [node name="DetectPitch" parent="." instance=ExtResource("3_3gki5")]

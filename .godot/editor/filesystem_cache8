@@ -1,10 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739050268
+::res://::1739211731
 default_bus_layout.tres::AudioBusLayout::4119602603348103342::1739043579::0::1::::<><>::
 icon.webp::CompressedTexture2D::3626017087650301524::1739042041::1739042079::1::::<><>::
 maldita.ogg::AudioStreamOggVorbis::7990079772185374776::1739042041::1739042079::1::::<><>::
 README.md::TextFile::-1::1739042041::0::1::::<><>::
-show_spectrum.gd::GDScript::-1::1739050270::0::1::::<>Node2D<>::
-show_spectrum.tscn::PackedScene::7559994868945812833::1739050175::0::1::::<><>::res://show_spectrum.gd<>uid://dl3ppges2sw77::::res://maldita.ogg
-::res://scenes/::1739050268
-detect_pitch.tscn::PackedScene::1525381064277743712::1739050270::0::1::::<><>::
+show_spectrum.gd::GDScript::-1::1739050624::0::1::::<>Node2D<>::
+::res://scenes/::1739050625
+detect_pitch.tscn::PackedScene::1525381064277743712::1739050625::0::1::::<><>::res://scripts/detect_pitch.gd
+show_spectrum.tscn::PackedScene::7559994868945812833::1739050625::0::1::::<><>::res://show_spectrum.gd<>uid://dl3ppges2sw77::::res://maldita.ogg<>uid://vy52ktvsft8k::::res://scenes/detect_pitch.tscn
+::res://scripts/::1739050312
+detect_pitch.gd::GDScript::-1::1739050312::0::1::::<>Node2D<>::
